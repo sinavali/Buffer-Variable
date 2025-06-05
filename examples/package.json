@@ -1,0 +1,24 @@
+{
+  "name": "buffer-variables-examples",
+  "version": "1.0.0",
+  "description": "Example implementations for the buffer-variables package",
+  "private": true,
+  "scripts": {
+    "build:node": "tsc -p node-example/tsconfig.json",
+    "start:node": "npm run build:node && node node-example/node-example.js",
+    "build:feature": "tsc -p feature-showcase/tsconfig.json",
+    "start:feature": "npm run build:feature && node feature-showcase/feature-showcase.js",
+    "build:browser": "tsc -p browser-example/tsconfig.json",
+    "start:browser": "npm run build:browser && http-server browser-example -p 8080 --coep require-corp --coop same-origin",
+    "build:viewsync": "tsc -p viewsync-example/tsconfig.json",
+    "start:viewsync": "npm run build:viewsync && http-server viewsync-example -p 8080 --coep require-corp --coop same-origin"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "typescript": "^5.0.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

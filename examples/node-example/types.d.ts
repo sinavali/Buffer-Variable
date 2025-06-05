@@ -1,0 +1,1 @@
+declare module '@fbb-org/buffer-variables';

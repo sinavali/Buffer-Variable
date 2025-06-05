@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es2020",                       /* Specify ECMAScript target version */
+    "module": "commonjs",                     /* Specify module code generation for Node.js */
+    "outDir": "./",                           /* Output compiled files in the same directory */
+    "rootDir": "./",                          /* Specify the root directory of input files */
+    "strict": true,                           /* Enable all strict type-checking options */
+    "esModuleInterop": true,                  /* Enables emit interoperability between CommonJS and ES Modules */
+    "skipLibCheck": true,                     /* Skip type checking of declaration files */
+    "forceConsistentCasingInFileNames": true, /* Disallow inconsistently-cased references to the same file */
+    /* Resolve buffer-variables types from dist */
+    "baseUrl": "../../",                      /* Base directory for non-relative module names */
+    "paths": {
+      "buffer-variables": ["dist/index.d.ts"] /* Map buffer-variables to its type declarations */
+    }
+  },
+  "include": ["node-example.ts"],             /* Files to compile */
+  "exclude": ["node_modules"]                 /* Files to exclude */
+}

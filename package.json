@@ -1,0 +1,64 @@
+{
+  "name": "@fbb-org/buffer-variables",
+  "version": "1.0.1",
+  "description": "High-performance library for encoding/decoding objects to SharedArrayBuffer",
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/sinavali/Buffer-Variable.git"
+  },
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/buffer-variables.umd.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "clean": "rm -rf dist",
+    "watch": "node esbuild.config.js --watch"
+  },
+  "exports": {
+    ".": {
+      "browser": {
+        "default": "./dist/buffer-variables.umd.js"
+      },
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.esm.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs.js"
+      }
+    }
+  },
+  "keywords": [
+    "sharedarraybuffer",
+    "serialization",
+    "performance",
+    "worker",
+    "thread",
+    "multi-thread",
+    "node",
+    "browser"
+  ],
+  "author": "Sina Vali",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "esbuild": "^0.23.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2",
+    "tsc": "^2.0.4",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "files": [
+    "dist",
+    "src",
+    "tests",
+    "README.md",
+    "LICENSE"
+  ]
+}
