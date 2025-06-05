@@ -1,14 +1,19 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "outDir": "./dist",
     "target": "es2020",
     "module": "esnext",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "strict": true,
-    "moduleResolution": "node",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationDir": "./dist",
+    "emitDeclarationOnly": false,
+    "noEmitOnError": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist", "examples"]
 }

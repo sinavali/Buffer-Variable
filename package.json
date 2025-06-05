@@ -3,15 +3,14 @@
   "version": "1.0.1",
   "description": "High-performance library for encoding/decoding objects to SharedArrayBuffer",
   "repository": {
-    "type": "https",
-    "url": "https://github.com/sinavali/Buffer-Variable.git"
+    "type": "git",
+    "url": "git://github.com/sinavali/Buffer-Variable.git"
   },
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "browser": "dist/buffer-variables.umd.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "node esbuild.config.js",
+    "build": "tsc && node esbuild.config.js",
     "test": "jest",
     "test:cov": "jest --coverage",
     "clean": "rm -rf dist",
@@ -50,15 +49,10 @@
     "jest": "^29.7.0",
     "ts-jest": "^29.1.5",
     "ts-node": "^10.9.2",
-    "tsc": "^2.0.4",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },
   "files": [
-    "dist",
-    "src",
-    "tests",
-    "README.md",
-    "LICENSE"
+    "dist"
   ]
 }
