@@ -101,13 +101,13 @@ The library is TypeScript-based, ensuring type safety, and supports Node.js, bro
 Install via npm or yarn:
 
 ```bash
-npm install buffer-variables
+npm install @fbb-org/buffer-variables
 ```
 
 Or with yarn:
 
 ```bash
-yarn add buffer-variables
+yarn add @fbb-org/buffer-variables
 ```
 
 ### Node.js
@@ -115,9 +115,9 @@ Use directly with CommonJS or ESM:
 
 ```javascript
 // CommonJS
-const { View } = require('buffer-variables');
+const { View } = require('@fbb-org/buffer-variables');
 // ESM
-import { View } from 'buffer-variables';
+import { View } from '@fbb-org/buffer-variables';
 ```
 
 ### Browser
@@ -136,7 +136,7 @@ Ensure cross-origin isolation headers are set (see [Browser Setup](#browser-setu
 Import in React or Vue projects after bundling:
 
 ```javascript
-import { View } from 'buffer-variables';
+import { View } from '@fbb-org/buffer-variables';
 ```
 
 ### Build Setup
@@ -159,7 +159,7 @@ See `esbuild.config.js` for configuration.
 
 ### Node.js
 ```javascript
-import { View } from 'buffer-variables';
+import { View } from '@fbb-org/buffer-variables';
 
 const data = { num: 42, str: 'hello', arr: [1, 2, 3] };
 const view = View.createView(data, { mutable: true });
@@ -198,7 +198,7 @@ Ensure the server sets cross-origin isolation headers.
 
 ### Node.js: Encoding and Decoding
 ```javascript
-import { View } from 'buffer-variables';
+import { View } from '@fbb-org/buffer-variables';
 
 const data = {
   user: { id: 123, name: 'Alice', scores: [95, 88, 92] },
@@ -231,7 +231,7 @@ console.log(view.decode(sab));
 ### React: Real-Time Synchronization
 ```jsx
 import React, { useState, useEffect } from 'react';
-import { View, ViewSync } from 'buffer-variables';
+import { View, ViewSync } from '@fbb-org/buffer-variables';
 
 const App = () => {
   const [view] = useState(() => View.createView({ counter: 0 }, { mutable: true }));
@@ -273,7 +273,7 @@ export default App;
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import { View, ViewSync } from 'buffer-variables';
+import { View, ViewSync } from '@fbb-org/buffer-variables';
 
 const view = new View().createView({ name: 'Alice' }, { mutable: true });
 const sab = new SharedArrayBuffer(view.byteSize);
