@@ -463,7 +463,7 @@ Enabled with `exposedLowLevelApi: true`.
 
 ### Setup for Development
 ```bash
-git clone https://github.com/your-repo/buffer-variables.git
+git clone https://github.com/sinavali/Buffer-Variable.git
 cd buffer-variables
 npm install
 npm test
