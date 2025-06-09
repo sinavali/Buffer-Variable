@@ -1,6 +1,8 @@
 I encountered codes and APIs working not as intended
 Do not use, or use it and be ready for a new version next week with unit tests involved in codebase and usable methods.
 
+**I used grok to generate JSDoc and README.MD**
+
 # Buffer Variables
 
 **buffer-variables** is a high-performance, TypeScript-based library for encoding and decoding complex JavaScript objects into `SharedArrayBuffer` for efficient data sharing across threads or workers in both Node.js and browser environments. Optimized for large datasets (~50MB, 10-layer nested objects) with processing times of ~120–172ms, it supports mutable/immutable views, automatic schema inference, partial updates, diff/patch operations, and real-time synchronization. The library is compatible with Node.js, modern browsers, and frontend frameworks like React and Vue, making it ideal for collaborative applications, data processing pipelines, and performance-critical systems.
