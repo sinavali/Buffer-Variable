@@ -12,8 +12,9 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc && node esbuild.config.js",
-    "test": "jest",
-    "test:cov": "jest --coverage",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage",
+    "test:cov:ui": "vitest run --coverage --ui",
     "clean": "rm -rf dist",
     "watch": "node esbuild.config.js --watch"
   },
