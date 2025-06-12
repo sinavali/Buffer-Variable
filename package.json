@@ -1,6 +1,6 @@
 {
   "name": "@fbb-org/buffer-variables",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "High-performance library for encoding/decoding objects to SharedArrayBuffer",
   "repository": {
     "type": "git",
