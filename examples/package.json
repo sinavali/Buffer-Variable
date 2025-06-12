@@ -14,6 +14,7 @@
     "start:viewsync": "npm run build:viewsync && http-server viewsync-example -p 8080 --coep require-corp --coop same-origin"
   },
   "dependencies": {
+    "@fbb-org/buffer-variables": "^1.0.4"
   },
   "devDependencies": {
     "http-server": "^14.1.1",

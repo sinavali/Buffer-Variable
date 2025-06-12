@@ -1,14 +1,14 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Demonstrates buffer-variables usage in a Node.js environment.
  * Creates a SharedArrayBuffer, encodes data using View, and shares it
  * with a worker thread for processing.
  *
  * @module node-example
- * @requires buffer-variables
+ * @requires @fbb-org/buffer-variables
  * @requires worker_threads
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 const buffer_variables_1 = require("@fbb-org/buffer-variables");
 const worker_threads_1 = require("worker_threads");
 /**
@@ -22,7 +22,7 @@ function run() {
             id: 1,
             timestamp: new Date(),
             amount: 100.50,
-            details: ['Purchase', 'Online'],
+            details: ['Purchase', 'Online']
         };
         const view = buffer_variables_1.View.createView(initialData, { mutable: true });
         const sab = new SharedArrayBuffer(view.byteSize);
@@ -45,12 +45,13 @@ function run() {
     else {
         // Worker thread: Decode SAB
         const sab = worker_threads_1.workerData;
-        const view = buffer_variables_1.View.createView({
+        const sampleData = {
             id: 0,
-            timestamp: new Date(),
+            timestamp: new Date(0),
             amount: 0,
-            details: [],
-        }, { mutable: true });
+            details: []
+        };
+        const view = buffer_variables_1.View.createView(sampleData, { mutable: true });
         const decoded = view.decode(sab);
         worker_threads_1.parentPort.postMessage({ type: 'decoded', data: decoded });
         // Watch for updates

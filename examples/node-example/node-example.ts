@@ -4,11 +4,10 @@
  * with a worker thread for processing.
  *
  * @module node-example
- * @requires buffer-variables
+ * @requires @fbb-org/buffer-variables
  * @requires worker_threads
  */
-
-import { View } from "@fbb-org/buffer-variables"
+import { View } from '@fbb-org/buffer-variables';
 import { Worker, isMainThread, parentPort, workerData } from 'worker_threads';
 
 /**
@@ -33,7 +32,7 @@ function run(): void {
       id: 1,
       timestamp: new Date(),
       amount: 100.50,
-      details: ['Purchase', 'Online'],
+      details: ['Purchase', 'Online']
     };
 
     const view = View.createView(initialData, { mutable: true });
@@ -59,12 +58,13 @@ function run(): void {
   } else {
     // Worker thread: Decode SAB
     const sab: SharedArrayBuffer = workerData;
-    const view = View.createView({
+    const sampleData: TransactionLog = {
       id: 0,
       timestamp: new Date(),
       amount: 0,
-      details: [],
-    }, { mutable: true });
+      details: [''] // Match string[] structure
+    };
+    const view = View.createView(sampleData, { mutable: true });
 
     const decoded = view.decode(sab);
     parentPort!.postMessage({ type: 'decoded', data: decoded });
